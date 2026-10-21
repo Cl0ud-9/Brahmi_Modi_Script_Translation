@@ -1,0 +1,17 @@
+Brahmi and Modi Script Translation does not bundle third-party code. These are installed or downloaded separately,
+and each keeps its own license.
+
+Python packages, installed from PyPI by requirements.txt:
+  FastAPI, Uvicorn, Starlette, Pydantic and python-multipart (MIT or BSD 3-Clause), Streamlit, Requests and
+  ONNX Runtime (Apache License 2.0 or MIT), NumPy (BSD 3-Clause), Pillow (MIT-CMU).
+
+Sanskrit-English dictionary, downloaded by scripts/download_dictionary.py into data/ and not included in this
+repository: H. H. Wilson, "A Dictionary in Sanscrit and English" (1832), in the digital edition of the Cologne
+Digital Sanskrit Dictionaries (https://www.sanskrit-lexicon.uni-koeln.de), licensed under CC BY-SA 4.0
+(https://creativecommons.org/licenses/by-sa/4.0/).
+
+Brahmi glyphs in the training images and in samples/ were rendered with the Noto Sans Brahmi font, licensed under
+the SIL Open Font License 1.1 (https://openfontlicense.org). The font itself is not included.
+
+Unicode character names, used to build the transliteration tables, come from Python's unicodedata module and the
+Unicode Character Database (Unicode License v3).

@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Report a security problem
+    url: https://github.com/Cl0ud-9/Brahmi_Modi_Script_Translation/security/advisories/new
+    about: Please report vulnerabilities privately, not as a public issue.
+  - name: The training data and models on Kaggle
+    url: https://www.kaggle.com/datasets/paragtonpe/brahmi-ocr-synthetic-dataset
+    about: The synthetic Brahmi lines, the trained recogniser and its checkpoints.

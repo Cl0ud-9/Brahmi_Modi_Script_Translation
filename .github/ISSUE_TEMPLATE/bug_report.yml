@@ -1,0 +1,42 @@
+name: Bug report
+description: A wrong transliteration, translation or recognition, or something that does not run
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time. The **Honest limits** section of the
+        [README](https://github.com/Cl0ud-9/Brahmi_Modi_Script_Translation#honest-limits) covers what the project
+        does not do yet, such as reading photographs of inscriptions.
+  - type: dropdown
+    id: where
+    attributes:
+      label: Where does it go wrong?
+      options:
+        - Brahmi to IAST
+        - Modi to IAST
+        - IAST to English
+        - Reading a Brahmi image
+        - The app (Streamlit)
+        - The API
+        - Installing or running
+    validations:
+      required: true
+  - type: textarea
+    id: input
+    attributes:
+      label: What did you put in?
+      description: Paste the text, or attach the image.
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What came out, and what should it have been?
+    validations:
+      required: true
+  - type: input
+    id: env
+    attributes:
+      label: Operating system and Python version
+      placeholder: Windows 11, Python 3.12.7

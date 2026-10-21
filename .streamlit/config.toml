@@ -1,0 +1,9 @@
+[server]
+# The API refuses images over 5 MB, so the uploader says the same
+maxUploadSize = 5
+
+[client]
+toolbarMode = "minimal"
+
+[browser]
+gatherUsageStats = false

@@ -1,0 +1,31 @@
+name: Idea or feature request
+description: Suggest a script, a feature or an improvement to the models
+labels: [enhancement]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Ideas are welcome. Please open one before writing code for a large change, so the approach can be agreed first
+        (see [CONTRIBUTING](https://github.com/Cl0ud-9/Brahmi_Modi_Script_Translation/blob/main/CONTRIBUTING.md)).
+  - type: textarea
+    id: problem
+    attributes:
+      label: What are you trying to do?
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would you like the project to do?
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Which part is it about?
+      options:
+        - Transliteration
+        - English translation
+        - Text recognition (OCR)
+        - The app or the API
+        - Something else
