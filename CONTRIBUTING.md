@@ -20,8 +20,8 @@ license: you have the right to submit the change, and it becomes part of the pro
 Requirements: Python 3.11, 3.12 or 3.13.
 
 ```bash
-git clone https://github.com/<your-account>/Brahmi_Modi_Script_Translation.git
-cd Brahmi_Modi_Script_Translation
+git clone https://github.com/<your-account>/Brahmi-Modi-Translator.git
+cd Brahmi-Modi-Translator
 python -m venv .venv
 .venv\Scripts\activate          # macOS/Linux: source .venv/bin/activate
 pip install -r requirements-dev.txt

@@ -3,7 +3,7 @@
 <p align="center"><strong>Travel Bot: read Brahmi and Modi script as romanised Sanskrit, gloss it in English, and read printed Brahmi from images.</strong></p>
 
 <p align="center">
-  <a href="https://github.com/Cl0ud-9/Brahmi_Modi_Script_Translation/actions/workflows/ci.yml"><img src="https://github.com/Cl0ud-9/Brahmi_Modi_Script_Translation/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
+  <a href="https://github.com/Cl0ud-9/Brahmi-Modi-Translator/actions/workflows/ci.yml"><img src="https://github.com/Cl0ud-9/Brahmi-Modi-Translator/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-source--available-5b4bd5" alt="License: source-available"></a>
   <img src="https://img.shields.io/badge/python-3.11%E2%80%933.13-3776ab?logo=python&logoColor=white" alt="Python 3.11 to 3.13">
   <a href="https://www.kaggle.com/datasets/paragtonpe/brahmi-ocr-synthetic-dataset"><img src="https://img.shields.io/badge/data%20%26%20models-Kaggle-20beff?logo=kaggle&logoColor=white" alt="Data and models on Kaggle"></a>
@@ -46,8 +46,8 @@ It also reads printed Brahmi from an image with a recognition model trained for 
 You need Python 3.11, 3.12 or 3.13.
 
 ```bash
-git clone https://github.com/Cl0ud-9/Brahmi_Modi_Script_Translation.git
-cd Brahmi_Modi_Script_Translation
+git clone https://github.com/Cl0ud-9/Brahmi-Modi-Translator.git
+cd Brahmi-Modi-Translator
 python -m venv .venv
 .venv\Scripts\activate          # macOS/Linux: source .venv/bin/activate
 pip install -r requirements.txt

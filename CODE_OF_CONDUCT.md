@@ -31,7 +31,7 @@ keep doing so, with or without warning depending on how serious it was.
 
 To report behaviour that worries you, contact the maintainer privately through the address on their
 [GitHub profile](https://github.com/Cl0ud-9), or, if that is not possible, open a private report through the
-[security form](https://github.com/Cl0ud-9/Brahmi_Modi_Script_Translation/security/advisories/new) and say it is a
+[security form](https://github.com/Cl0ud-9/Brahmi-Modi-Translator/security/advisories/new) and say it is a
 conduct report. Reports are handled quietly, and the person who reports is not named.
 
 This applies in every space that belongs to the project, and when someone is clearly speaking for it elsewhere.

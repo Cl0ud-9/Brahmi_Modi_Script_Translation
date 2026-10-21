@@ -5,9 +5,9 @@
 Please do not open a public issue for a security problem.
 
 Report it privately through GitHub: open the
-[Security tab](https://github.com/Cl0ud-9/Brahmi_Modi_Script_Translation/security) and choose **Report a
+[Security tab](https://github.com/Cl0ud-9/Brahmi-Modi-Translator/security) and choose **Report a
 vulnerability**, or go straight to
-[the advisory form](https://github.com/Cl0ud-9/Brahmi_Modi_Script_Translation/security/advisories/new). Only the
+[the advisory form](https://github.com/Cl0ud-9/Brahmi-Modi-Translator/security/advisories/new). Only the
 maintainer sees what you send.
 
 Please include what you found, how to reproduce it (a request or an image is ideal), and what you think an attacker
