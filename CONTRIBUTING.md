@@ -17,7 +17,7 @@ license: you have the right to submit the change, and it becomes part of the pro
 
 ## Setup
 
-Requirements: Python 3.11, 3.12 or 3.13.
+Requirements: Python 3.11, 3.12, 3.13 or 3.14.
 
 ```bash
 git clone https://github.com/<your-account>/LipiYatra.git

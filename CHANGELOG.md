@@ -5,6 +5,12 @@ What changed in each version of LipiYatra.
 The format follows [Keep a Changelog](https://keepachangelog.com), and the versions follow
 [Semantic Versioning](https://semver.org).
 
+## [1.1.1] - 2026-10-22
+
+### Changed
+
+- Python 3.14 is supported: the tests pass on it, and continuous integration now runs on Python 3.11 to 3.14.
+
 ## [1.1.0] - 2026-10-21
 
 ### Changed

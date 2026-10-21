@@ -5,7 +5,7 @@
 <p align="center">
   <a href="https://github.com/Cl0ud-9/LipiYatra/actions/workflows/ci.yml"><img src="https://github.com/Cl0ud-9/LipiYatra/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-source--available-5b4bd5" alt="License: source-available"></a>
-  <img src="https://img.shields.io/badge/python-3.11%E2%80%933.13-3776ab?logo=python&logoColor=white" alt="Python 3.11 to 3.13">
+  <img src="https://img.shields.io/badge/python-3.11%E2%80%933.14-3776ab?logo=python&logoColor=white" alt="Python 3.11 to 3.14">
   <a href="https://www.kaggle.com/datasets/paragtonpe/brahmi-ocr-synthetic-dataset"><img src="https://img.shields.io/badge/data%20%26%20models-Kaggle-20beff?logo=kaggle&logoColor=white" alt="Data and models on Kaggle"></a>
 </p>
 
@@ -47,7 +47,7 @@ major project: a travel assistant for heritage sites, described in the project's
 
 ## Quick start
 
-You need Python 3.11, 3.12 or 3.13.
+You need Python 3.11, 3.12, 3.13 or 3.14.
 
 ```bash
 git clone https://github.com/Cl0ud-9/LipiYatra.git
@@ -181,7 +181,7 @@ pytest
 
 The tests check that every Brahmi and Modi letter, vowel sign and digit is mapped, spot-check the mappings against
 their Unicode names, and cover the dictionary lookup, the recogniser on the
-samples, and every API endpoint, including its limits. They run on every push for Python 3.11 to 3.13. See
+samples, and every API endpoint, including its limits. They run on every push for Python 3.11 to 3.14. See
 [CONTRIBUTING.md](CONTRIBUTING.md) before opening a pull request, and [SECURITY.md](SECURITY.md) to report a
 vulnerability. [CHANGELOG.md](CHANGELOG.md) says what changed in each version.
 

@@ -1,4 +1,4 @@
-# The app and API. Python 3.11 to 3.13. The notebooks need more: see notebooks/README.md.
+# The app and API. Python 3.11 to 3.14. The notebooks need more: see notebooks/README.md.
 fastapi==0.156.3
 uvicorn[standard]==0.54.0
 python-multipart==0.0.32
