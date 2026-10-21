@@ -43,12 +43,7 @@ The first complete public version: the app, the API, the trained recogniser and 
   from `API_BASE_URL`.
 - The `indic-nlp-library` dependency is gone: on romanised text it changed nothing.
 
-### Removed
-
-- `metrics_util.py`, which printed random accuracy figures rather than measuring anything.
-- `complete_pipeline.ipynb`, an OCR pipeline for Google Colab that the app did not use.
-
 ## Before 1.0.0
 
-The repository held the transliteration API (`api.py`), a Colab pipeline notebook and `metrics_util.py`, published on
-2025-05-14. The app and the trained models stayed on the author's computer until this version.
+The repository held the transliteration API (`api.py`), published on 2025-05-14. The app and the trained models stayed
+on the author's computer until this version.
