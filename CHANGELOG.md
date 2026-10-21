@@ -1,9 +1,17 @@
 # Changelog
 
-What changed in each version of Brahmi and Modi Script Translation.
+What changed in each version of LipiYatra.
 
 The format follows [Keep a Changelog](https://keepachangelog.com), and the versions follow
 [Semantic Versioning](https://semver.org).
+
+## [1.1.0] - 2026-10-21
+
+### Changed
+
+- The project is now called LipiYatra, from *lipi*, script, and *yātrā*, journey. The repository moved from
+  `Cl0ud-9/Brahmi_Modi_Script_Translation` to `Cl0ud-9/LipiYatra`; the old addresses redirect to it.
+- The app and the API carry the new name.
 
 ## [1.0.0] - 2026-10-21
 

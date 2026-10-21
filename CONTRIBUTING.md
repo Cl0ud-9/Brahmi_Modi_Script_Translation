@@ -1,4 +1,4 @@
-# Contributing to Brahmi and Modi Script Translation
+# Contributing to LipiYatra
 
 Thanks for wanting to help. Bug reports, ideas and pull requests are all welcome. Please keep to the
 [code of conduct](CODE_OF_CONDUCT.md).
@@ -20,8 +20,8 @@ license: you have the right to submit the change, and it becomes part of the pro
 Requirements: Python 3.11, 3.12 or 3.13.
 
 ```bash
-git clone https://github.com/<your-account>/Brahmi-Modi-Translator.git
-cd Brahmi-Modi-Translator
+git clone https://github.com/<your-account>/LipiYatra.git
+cd LipiYatra
 python -m venv .venv
 .venv\Scripts\activate          # macOS/Linux: source .venv/bin/activate
 pip install -r requirements-dev.txt

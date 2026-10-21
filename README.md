@@ -1,9 +1,9 @@
-<h1 align="center">Brahmi and Modi Script Translation</h1>
+<h1 align="center">LipiYatra</h1>
 
-<p align="center"><strong>Travel Bot: read Brahmi and Modi script as romanised Sanskrit, gloss it in English, and read printed Brahmi from images.</strong></p>
+<p align="center"><strong>A travel companion that reads ancient Indian scripts: Brahmi and Modi to romanised Sanskrit, Sanskrit to English, and printed Brahmi from images.</strong></p>
 
 <p align="center">
-  <a href="https://github.com/Cl0ud-9/Brahmi-Modi-Translator/actions/workflows/ci.yml"><img src="https://github.com/Cl0ud-9/Brahmi-Modi-Translator/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
+  <a href="https://github.com/Cl0ud-9/LipiYatra/actions/workflows/ci.yml"><img src="https://github.com/Cl0ud-9/LipiYatra/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-source--available-5b4bd5" alt="License: source-available"></a>
   <img src="https://img.shields.io/badge/python-3.11%E2%80%933.13-3776ab?logo=python&logoColor=white" alt="Python 3.11 to 3.13">
   <a href="https://www.kaggle.com/datasets/paragtonpe/brahmi-ocr-synthetic-dataset"><img src="https://img.shields.io/badge/data%20%26%20models-Kaggle-20beff?logo=kaggle&logoColor=white" alt="Data and models on Kaggle"></a>
@@ -21,7 +21,7 @@
 <br>
 
 <p align="center">
-  <img src="docs/img/chat.png" alt="The Travel Bot chat converting a Brahmi phrase to 'devānaṃpiyena piyadasina', that phrase to the English 'of the gods beloved Piyadasi', and Modi script to 'marāṭhī'" width="49%" align="top">
+  <img src="docs/img/chat.png" alt="The LipiYatra chat converting a Brahmi phrase to 'devānaṃpiyena piyadasina', that phrase to the English 'of the gods beloved Piyadasi', and Modi script to 'marāṭhī'" width="49%" align="top">
   &nbsp;
   <img src="docs/img/ocr.png" alt="The image tab reading a Brahmi sample line and showing the recognised Brahmi, its IAST 'chaithaṟa' and a check mark" width="49%" align="top">
 </p>
@@ -30,9 +30,13 @@
 
 <br>
 
-Brahmi, the script of Ashoka's edicts, and Modi, used to write Marathi for centuries, are hard to read today.
-Travel Bot turns either into IAST, the standard romanisation of Sanskrit, and IAST into a word-by-word English gloss.
-It also reads printed Brahmi from an image with a recognition model trained for this project.
+Brahmi, the script of Ashoka's edicts, and Modi, used to write Marathi for centuries, are carved and written across
+India's heritage sites, and few visitors can read them. LipiYatra turns either script into IAST, the standard
+romanisation of Sanskrit, and IAST into a word-by-word English gloss. It also reads printed Brahmi from an image with
+a recognition model trained for this project.
+
+The name joins *lipi*, script, and *yātrā*, journey. LipiYatra is the script-reading core of **Travel Bot**, a B.Tech
+major project: a travel assistant for heritage sites, described in the project's research paper.
 
 | You give it | You get | Example |
 |---|---|---|
@@ -46,8 +50,8 @@ It also reads printed Brahmi from an image with a recognition model trained for 
 You need Python 3.11, 3.12 or 3.13.
 
 ```bash
-git clone https://github.com/Cl0ud-9/Brahmi-Modi-Translator.git
-cd Brahmi-Modi-Translator
+git clone https://github.com/Cl0ud-9/LipiYatra.git
+cd LipiYatra
 python -m venv .venv
 .venv\Scripts\activate          # macOS/Linux: source .venv/bin/activate
 pip install -r requirements.txt
@@ -142,6 +146,9 @@ The training data, the checkpoints and the training logs are on Kaggle:
 - **No Modi recognition.** Modi text can be transliterated, but there is no Modi image model in the app.
 - **English is a glossary, not a translation.** Each word gets its first dictionary sense, with no grammar, so
   sentences read like word lists and some senses are the wrong one for the context. The dictionary is from 1832.
+- **The travel agents are not here.** Travel Bot's trip suggestions, weather updates and emergency-services help,
+  which the research paper describes as LangGraph agents, are not part of this repository. LipiYatra is the
+  script-reading part.
 - **Prakrit is read as Sanskrit.** Ashoka's inscriptions are in Prakrit, so many words are not in a Sanskrit
   dictionary and are returned as they are.
 
@@ -151,7 +158,7 @@ The training data, the checkpoints and the training logs are on Kaggle:
 
 ```text
 api.py                     FastAPI: transliteration, translation and recognition endpoints
-app.py                     Travel Bot, the Streamlit app
+app.py                     the LipiYatra chat, a Streamlit app
 brahmi_modi/
   transliterate.py         Brahmi and Modi to IAST
   translate.py             IAST to English

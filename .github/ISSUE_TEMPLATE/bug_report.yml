@@ -6,7 +6,7 @@ body:
     attributes:
       value: |
         Thanks for taking the time. The **Honest limits** section of the
-        [README](https://github.com/Cl0ud-9/Brahmi-Modi-Translator#honest-limits) covers what the project
+        [README](https://github.com/Cl0ud-9/LipiYatra#honest-limits) covers what the project
         does not do yet, such as reading photographs of inscriptions.
   - type: dropdown
     id: where

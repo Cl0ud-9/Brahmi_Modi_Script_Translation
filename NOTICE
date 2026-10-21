@@ -1,4 +1,4 @@
-Brahmi and Modi Script Translation does not bundle third-party code. These are installed or downloaded separately,
+LipiYatra does not bundle third-party code. These are installed or downloaded separately,
 and each keeps its own license.
 
 Python packages, installed from PyPI by requirements.txt:

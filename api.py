@@ -20,7 +20,7 @@ MAX_IMAGE_BYTES = 5 * 1024 * 1024
 # Refuse decompression bombs: far more pixels than any real photo of a line of text
 Image.MAX_IMAGE_PIXELS = 40_000_000
 
-app = FastAPI(title='Brahmi and Modi Script Translation', version=__version__)
+app = FastAPI(title='LipiYatra', version=__version__)
 
 app.add_middleware(
     CORSMiddleware,

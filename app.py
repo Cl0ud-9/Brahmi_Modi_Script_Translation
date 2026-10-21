@@ -40,9 +40,10 @@ def answer(prompt):
     return f'Error: {error}' if error else f"{LABELS[script]}: {result['output']}"
 
 
-st.set_page_config(page_title='Travel Bot', page_icon='🌍')
-st.title('🌍 Travel Bot')
-st.caption('Read Brahmi and Modi inscriptions: convert them to romanised Sanskrit (IAST), and IAST to English.')
+st.set_page_config(page_title='LipiYatra', page_icon='🌍')
+st.title('🌍 LipiYatra')
+st.caption('A travel companion for Brahmi and Modi inscriptions: convert them to romanised Sanskrit (IAST), '
+           'and IAST to English.')
 
 if 'messages' not in st.session_state or st.button('🔁 Reset chat'):
     st.session_state.messages = []
