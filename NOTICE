@@ -10,6 +10,10 @@ repository: H. H. Wilson, "A Dictionary in Sanscrit and English" (1832), in the 
 Digital Sanskrit Dictionaries (https://www.sanskrit-lexicon.uni-koeln.de), licensed under CC BY-SA 4.0
 (https://creativecommons.org/licenses/by-sa/4.0/).
 
+MODI-HChar dataset, used to train the project's Modi character classifier (not included in this repository):
+M. Deshmukh and S. Kolhe, "MODI-HChar: Historical MODI Script Handwritten Character Dataset", Mendeley Data, V1, 2023,
+https://doi.org/10.17632/pk2zrt58pp.1, licensed under CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/).
+
 Brahmi glyphs in the training images and in samples/ were rendered with the Noto Sans Brahmi font, licensed under
 the SIL Open Font License 1.1 (https://openfontlicense.org). The font itself is not included.
 

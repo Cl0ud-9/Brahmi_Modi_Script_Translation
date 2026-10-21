@@ -14,6 +14,7 @@
   <a href="#the-api">The API</a> &nbsp;·&nbsp;
   <a href="#how-it-works">How it works</a> &nbsp;·&nbsp;
   <a href="#the-brahmi-recogniser">The recogniser</a> &nbsp;·&nbsp;
+  <a href="#data">Data</a> &nbsp;·&nbsp;
   <a href="#honest-limits">Honest limits</a>
 </p>
 
@@ -117,6 +118,15 @@ images in [samples/](samples) are held-out lines too; one of them, `brahmi_6.png
 
 The training data, the checkpoints and the training logs are on Kaggle:
 **[Brahmi OCR synthetic dataset](https://www.kaggle.com/datasets/paragtonpe/brahmi-ocr-synthetic-dataset)**.
+
+## Data
+
+| Dataset | Used for | Source |
+|---|---|---|
+| Brahmi OCR synthetic dataset | Training and testing the Brahmi recogniser | Made for this project: [Kaggle](https://www.kaggle.com/datasets/paragtonpe/brahmi-ocr-synthetic-dataset) |
+| MODI-HChar, historical Modi handwritten characters (57 classes) | The project's Modi character classifier, an experiment not used by the app or included here | M. Deshmukh and S. Kolhe, [Mendeley Data](https://data.mendeley.com/datasets/pk2zrt58pp/1), DOI 10.17632/pk2zrt58pp.1, CC BY 4.0 |
+| H. H. Wilson, *A Dictionary in Sanscrit and English* (1832) | IAST to English | [Cologne Digital Sanskrit Dictionaries](https://www.sanskrit-lexicon.uni-koeln.de), CC BY-SA 4.0, downloaded by `scripts/download_dictionary.py` |
+| Noto Sans Brahmi font | Rendering the synthetic lines | [Google Fonts](https://fonts.google.com/noto/specimen/Noto+Sans+Brahmi), SIL Open Font License 1.1 |
 
 ## Honest limits
 
