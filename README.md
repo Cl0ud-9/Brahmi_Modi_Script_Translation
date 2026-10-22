@@ -55,23 +55,28 @@ cd LipiYatra
 python -m venv .venv
 .venv\Scripts\activate          # macOS/Linux: source .venv/bin/activate
 pip install -r requirements.txt
-python scripts/download_dictionary.py   # the Sanskrit-English dictionary, about 9 MB
-```
-
-Then start the API and the app, each in its own terminal:
-
-```bash
-python api.py                   # http://127.0.0.1:8001
 streamlit run app.py            # opens http://localhost:8501
 ```
 
-In the chat, type `convert brahmi: 𑀫𑀫 𑀦𑀸𑀫`, `convert modi: 𑘦𑘻𑘟𑘲` or `convert iast: mama nāma`. The **Read a
-Brahmi image** tab has sample images to try. Without the dictionary, IAST to English still works for the built-in
-word list.
+That is all: the app does the work itself, and on its first run it downloads the Sanskrit-English dictionary (about
+9 MB, checked against a fixed checksum). In the chat, type `convert brahmi: 𑀫𑀫 𑀦𑀸𑀫`, `convert modi: 𑘦𑘻𑘟𑘲` or
+`convert iast: mama nāma`. The **Read a Brahmi image** tab has sample images to try. If the dictionary cannot be
+downloaded, the app says so and IAST to English still works for the built-in word list.
+
+### Put it online
+
+The app runs as a single process, so [Streamlit Community Cloud](https://share.streamlit.io) can host it for free:
+choose **Create app**, pick this repository, keep `app.py` as the main file, and deploy. `requirements.txt` has
+everything it needs, and the dictionary downloads on the first visit.
 
 ## The API
 
-Interactive documentation is at `http://127.0.0.1:8001/docs` while the API runs.
+The app does not need it, but the same features are available over HTTP for other programs:
+
+```bash
+python scripts/download_dictionary.py   # once: the app does this by itself, the API does not
+python api.py                           # http://127.0.0.1:8001, documentation at /docs
+```
 
 | Method and path | Body | Returns |
 |---|---|---|
@@ -85,8 +90,10 @@ Interactive documentation is at `http://127.0.0.1:8001/docs` while the API runs.
 curl -F "image=@samples/brahmi_2.png" http://127.0.0.1:8001/ocr/brahmi
 ```
 
-Text is limited to 5,000 characters and images to 5 MB. Set `API_BASE_URL` for the app if the API runs elsewhere, and
-`ALLOWED_ORIGINS` (comma-separated) for browsers that call the API directly.
+Text is limited to 5,000 characters and images to 5 MB, in the API and the app alike: both use
+[brahmi_modi/service.py](brahmi_modi/service.py). To have the app use a running API instead of working in-process,
+set `API_BASE_URL` (for example `http://127.0.0.1:8001`). Set `ALLOWED_ORIGINS` (comma-separated) for browsers that
+call the API directly.
 
 ## How it works
 
@@ -157,17 +164,19 @@ The training data, the checkpoints and the training logs are on Kaggle:
 ## Project structure
 
 ```text
-api.py                     FastAPI: transliteration, translation and recognition endpoints
-app.py                     the LipiYatra chat, a Streamlit app
+app.py                     the LipiYatra chat, a Streamlit app that runs on its own
+api.py                     the same features over HTTP (FastAPI), for other programs
 brahmi_modi/
+  service.py               what the app and the API share: convert text, read an image, and the limits
   transliterate.py         Brahmi and Modi to IAST
   translate.py             IAST to English
+  dictionary.py            downloading and checking Wilson's dictionary
   ocr.py                   Brahmi recognition with ONNX Runtime
 models/                    the recogniser (ONNX) and its character list
 samples/                   held-out Brahmi lines with their text
 scripts/download_dictionary.py
 notebooks/                 dataset generation, training and research (see notebooks/README.md)
-tests/                     pytest suite
+tests/                     pytest suite, including the app run headless
 ```
 
 ## Development

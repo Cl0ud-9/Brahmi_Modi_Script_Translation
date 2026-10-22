@@ -5,6 +5,23 @@ What changed in each version of LipiYatra.
 The format follows [Keep a Changelog](https://keepachangelog.com), and the versions follow
 [Semantic Versioning](https://semver.org).
 
+## [1.2.0] - 2026-10-22
+
+### Changed
+
+- The app works on its own: `streamlit run app.py` is the whole start-up. It calls the library in-process instead of
+  needing `python api.py` running beside it, which also makes it deployable on Streamlit Community Cloud as it is.
+  Setting `API_BASE_URL` still points it at a separate API.
+- The app downloads the Sanskrit-English dictionary on its first run, checked against the same fixed checksum as
+  `scripts/download_dictionary.py`, and says so if it cannot.
+- `brahmi_modi/service.py` holds the limits and checks the app and the API share: text length, image size, images
+  that are not images, and decompression bombs.
+
+### Added
+
+- Tests that run the Streamlit app headless: the chat converts each script and the image tab reads a sample, with no
+  API running.
+
 ## [1.1.1] - 2026-10-22
 
 ### Changed

@@ -1,38 +1,27 @@
-"""Download the Sanskrit-English dictionary used by IAST to English into data/wil.txt.
+"""Download the Sanskrit-English dictionary used by IAST to English into data/wil.txt (about 9 MB).
 
-H. H. Wilson, A Dictionary in Sanscrit and English (1832), as digitised by the Cologne Digital Sanskrit Dictionaries
-(CC BY-SA 4.0). The file is pinned to one version and checked, so every install looks words up the same way.
+The app does this by itself on its first run; this script is for the API, or to fetch it ahead of time.
 """
-import hashlib
 import os
 import sys
-import urllib.request
 
-URL = ('https://raw.githubusercontent.com/sanskrit-lexicon/csl-orig/'
-       '784cab8af458dab7a63511ed33d727351232034f/v02/wil/wil.txt')
-SHA256 = '7db0cc57b1c0a69b9f25584a31028d39427210eedb785465a12871f75301530e'
-TARGET = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'data', 'wil.txt')
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-
-def sha256(path):
-    with open(path, 'rb') as f:
-        return hashlib.sha256(f.read()).hexdigest()
+from brahmi_modi.dictionary import ensure, is_installed  # noqa: E402
+from brahmi_modi.translate import DICTIONARY_PATH  # noqa: E402
 
 
 def main():
-    if os.path.exists(TARGET) and sha256(TARGET) == SHA256:
-        print('Dictionary already in place:', TARGET)
+    if is_installed():
+        print('Dictionary already in place:', DICTIONARY_PATH)
         return 0
-    os.makedirs(os.path.dirname(TARGET), exist_ok=True)
     print('Downloading the dictionary (about 9 MB)...')
-    partial = TARGET + '.part'
-    urllib.request.urlretrieve(URL, partial)
-    if sha256(partial) != SHA256:
-        os.remove(partial)
-        print('The download does not match the expected file. Nothing was saved.', file=sys.stderr)
+    try:
+        ensure()
+    except (OSError, ValueError) as e:
+        print(f'Could not download the dictionary: {e}', file=sys.stderr)
         return 1
-    os.replace(partial, TARGET)
-    print('Saved', TARGET)
+    print('Saved', DICTIONARY_PATH)
     return 0
 
 
